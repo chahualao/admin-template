@@ -90,10 +90,11 @@ white-space: nowrap;}
 .nav-list li:hover > span,.nav-list li:hover > a{
   color: #438EB9;
 }
+.nav-list ul > li > ul{padding-left:10px;}
 /**分支线条**/
 .nav-list li::before, .nav-list li::after {
   content: '';
-  left: -33px;
+  left: -4px;
   position: absolute;
   right: auto;
 }
@@ -108,7 +109,7 @@ white-space: nowrap;}
   border-top: 1px dotted #DEDBDB;
   height: 20px;
   top: 17px;
-  width: 35px
+  width: 14px
 }
 .nav-list li.li-parent > span {
   cursor: pointer
