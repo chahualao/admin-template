@@ -51,17 +51,7 @@ white-space: nowrap;}
   color: #fff;
   border: none;
 }
-.nav-list:before{
- display: block;
-    content: "";
-    position: absolute;
-    z-index: -2;
-    width: inherit;;
-    max-width: inherit;
-    bottom: 0;
-    top: 0;
-    background-color: #FFF;
-}
+
 .nav-list > ul {
   padding-left: 0px;
   margin-bottom: 0px;
@@ -69,7 +59,7 @@ white-space: nowrap;}
 .nav-list li {
   list-style-type: none;
   margin: 0;
-  padding: 8px 12px;
+  padding: 8px 0px 8px 12px;
   position: relative;
 }
 .nav-list >ul>li{
@@ -78,19 +68,22 @@ white-space: nowrap;}
   border-left: 2px solid #f8f8f8;
 }
 .nav-list > ul > li.li-selected{border-left: 2px solid #438EB9}
-.nav-list li > span,.nav-list li > a{
+.nav-list li > span,.nav-list li > a,.nav-list li > i{
   font-size: 13px;
   color: #616161;
   text-decoration: none;
+  cursor:pointer;
 }
+.nav-list ul > li > a{padding-right:38px;}
 .nav-list >ul > li:hover{
   background-color:#fafafa;
   border-left: 2px solid #438EB9
 }
-.nav-list li:hover > span,.nav-list li:hover > a{
+.nav-list li:hover > span,.nav-list li:hover > a,.nav-list li:hover > i{
   color: #438EB9;
 }
 .nav-list ul > li > ul{padding-left:10px;}
+.nav-list ul > li .menuDown{position:absolute;right: 4px;top:11px;}
 /**分支线条**/
 .nav-list li::before, .nav-list li::after {
   content: '';
@@ -110,9 +103,6 @@ white-space: nowrap;}
   height: 20px;
   top: 17px;
   width: 14px
-}
-.nav-list li.li-parent > span {
-  cursor: pointer
 }
 .nav-list > ul > li::before, .nav-list > ul > li::after {
   border: 0

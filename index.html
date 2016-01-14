@@ -111,7 +111,9 @@
     <script type="text/javascript">
       //初始化左侧菜单
       jQuery(document).ready(function($) {
-          $(".nav-list").Tree();
+          $(".nav-list").Tree({
+            menuDown:"glyphicon glyphicon-menu-down menuDown"
+          });
           var bodyH =  document.body.scrollHeight;
           //控制左侧菜单容器高度
           var leftcontainer = bodyH-51;
