@@ -38,6 +38,10 @@ white-space: nowrap;}
 /**左边菜单**/
 
 .left-container{
+  position: absolute;
+  left:0px;
+  top:0px;
+  z-index:10;
  border-right:1px solid #e5e5e5;
 }
 .left-menu{
@@ -135,6 +139,8 @@ white-space: nowrap;}
 .nav-list li.li-selected > span:hover, .nav-list li.li-selected > span:hover > a {
   color: #438EB9;
 }
+
+/** 右边内容 **/
 
 /*#####################################*/
 

@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2016-01-13 10:57:14
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-01-14 11:58:33
+* @Last Modified time: 2016-01-14 14:36:27
 */
 
 'use strict';
@@ -48,10 +48,17 @@
             //给图标添加事件
             Parents.each(function() {
                 //绑定的事件
-                console.log($(this));
                 var that = $(this);
                 $(this).find(' > i').bind('click', function(event) {
                     that.find('span').trigger('click');
+                });
+            });
+            //给一级菜单添加选择样式
+            var root = Tree.find('>ul>li');
+            root.each(function() {
+                $(this).bind('click',function() {
+                    $(this).addClass('li-selected');
+                    root.not(this).removeClass('li-selected');
                 });
             });
         });
