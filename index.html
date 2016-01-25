@@ -19,7 +19,7 @@
     <nav class="navbar navbar-admin">
       <div class="navbar-header pull-left" id="logo">
         <!-- 自定义后台图标 -->
-        <img src="admin/images/logo.png">
+        <span class="glyphicon glyphicon-leaf" style="font-size: 42px;color:#fff;margin-top:4px"></span>
       </div>
       <div class="navbar-header pull-left">
         <!-- 自定义后台名称 -->
@@ -71,54 +71,210 @@
         </ul>
       </div>  
     </nav>
+    <div class="breadcrumbs-container">
+      <div class="sidebar-shortcuts pull-left">
+        <button type="button" class="btn btn-info" title="后台设置"><span class="glyphicon glyphicon-cog"></span></button>
+        <button type="button" class="btn btn-default" id="drop-menu" title="分类菜单"><span class="glyphicon glyphicon-align-justify"></span></button>
+      </div>
+      <div class="breadcrumb-c pull-left">
+        <ol class="breadcrumb bc">
+          <li><span class="glyphicon glyphicon-home"></span><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li class="active">list</li>
+        </ol>
+      </div>
+      <!--  隐藏导航栏  -->
+      <div class="nav-list" id="nav-list">
+        <ul>
+          <li><span class="glyphicon glyphicon-dashboard"></span><a href="/">面板</a></li>
+          <li><span class="glyphicon glyphicon-duplicate"></span><a href="/">列表</a></li>
+          <li><span class="glyphicon glyphicon-duplicate"></span><a href="/">表单</a></li>
+          <li><span class="glyphicon glyphicon-cog"></span><a href="">系统设置</a>
+            <ul>
+              <li><span class="glyphicon glyphicon-th-list"></span><a href="">网站设置</a></li>
+              <li><span class="glyphicon glyphicon-th-list"></span><a href="">调试设置</a></li>
+            </ul>
+          </li>
+          <li><span class="glyphicon glyphicon-th-list"></span><a href="">分类</a>
+            <ul>
+                <li><span class="glyphicon glyphicon-th-list"></span><a href="">二级分类一</a></li>
+                <li><span class="glyphicon glyphicon-th-list"></span><a href="">二级分类二</a>
+                  <ul>
+                    <li><span class="glyphicon glyphicon-th-list"></span><a href="">三级分类一</a></li>
+                    <li><span class="glyphicon glyphicon-th-list"></span><a href="">三级分类二</a></li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!--主题内容部分-->
     <div class="container wrap">
       <div class="row">
         <div class="col-xs-12 no-padding">
-          <div class="left-container pull-left" id="leftcontainer">
-            <div class="navbar navbar-default left-menu">
-              <div class="navbar-header"></div>
-              <div class="nav-list">
-                <ul>
-                  <li><span class="glyphicon glyphicon-dashboard"></span><a href="">面板</a></li>
-                  <li><span class="glyphicon glyphicon-duplicate"></span><a href="">内容</a></li>
-                  <li><span class="glyphicon glyphicon-cog"></span><a href="">系统设置</a>
-                    <ul>
-                      <li><span class="glyphicon glyphicon-th-list"></span><a href="">网站设置</a></li>
-                      <li><span class="glyphicon glyphicon-th-list"></span><a href="">调试设置</a></li>
-                    </ul>
-                  </li>
-                  <li><span class="glyphicon glyphicon-th-list"></span><a href="">分类</a>
-                    <ul>
-                        <li><span class="glyphicon glyphicon-th-list"></span><a href="">新闻</a></li>
-                        <li><span class="glyphicon glyphicon-th-list"></span><a href="">关于我们</a>
-                          <ul>
-                            <li><span class="glyphicon glyphicon-th-list"></span><a href="">荣誉</a></li>
-                            <li><span class="glyphicon glyphicon-th-list"></span><a href="">资质</a></li>
-                          </ul>
-                        </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <!--<div class="page-header common-header">
+            <h3>首页</h3>
+          </div>-->
+          
+          <div class="table-header">
+            Results for "Latest Registered Domains"
           </div>
-          <div class="main-container pull-left" >
-            <div id="maincontainer">
-              
-            </div>
-          </div>
+          <table class="table table-bordered table-condensed table-hover table-info-list">
+            <thead>
+              <tr>
+                <th class="center">
+                  <input type="checkbox" name="ids[]">
+                </th>
+                <th class="">Details</th>
+                <th>Domain</th>
+                <th>Price</th>
+                <th class="">Clicks</th>
+                <th> <span class="glyphicon glyphicon-time"></span> Update </th>
+                <th class="">Status</th>
+                <th>Option</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="center">
+                <input type="checkbox" class="" name="ids[]">
+              </td>
+              <td class="center"><a href="#" class="green show-details-btn" title="Show Details"> <i class="glyphicon glyphicon-chevron-down"></i></a></td>
+              <td><a href="#">ace.com</a></td>
+              <td>$45</td>
+              <td class="">3,330</td>
+              <td>Feb 12</td>
+              <td class=""><span class="label label-sm label-warning">Expiring</span></td>
+              <td>
+                <div class="hidden-sm hidden-xs btn-group">
+                  <button class="btn btn-xs btn-success"> <i class="glyphicon glyphicon-check"></i> </button>
+                  <button class="btn btn-xs btn-info"> <i class="glyphicon glyphicon-pencil"></i> </button>
+                  <button class="btn btn-xs btn-danger"> <i class="glyphicon glyphicon-trash"></i> </button>
+                  <button class="btn btn-xs btn-warning"> <i class="glyphicon glyphicon-flag"></i> </button>
+                </div>
+                <div class="hidden-md hidden-lg">
+                  <div class="dropdown inline">
+                    <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto"> <i class="glyphicon glyphicon-cog"></i> </button>
+                    <ul class="dropdown-menu dropdown-menu-right dropdown-caret dropdown-close">
+                      <li> <a href="#" class="tooltip-info blue" data-toogle="tooltip" data-placement="left" title="View"> <span class="blue"> <i class="glyphicon glyphicon-search"></i> </span> </a> </li>
+                      <li> <a href="#" class="tooltip-success green" data-toogle="tooltip" data-placement="left" title="Edit"> <span class="green"> <i class="glyphicon glyphicon-pencil"></i> </span> </a> </li>
+                      <li> <a href="#" class="tooltip-error red" data-toogle="tooltip" data-placement="left" title="Delete"> <span class="red"> <i class="glyphicon glyphicon-trash"></i> </span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="detail-row">
+              <td colspan="100">
+                <div class="row no-margin">
+                  <div class="col-xs-12 col-xs-2">
+                    <div class="text-center">
+                      <img src="admin/images/avator-default.jpg" class="thumbnail inline detail-img" style="height:170px">
+                      <div class="detail-img-desc">
+                        <a href="#">
+                          <span class="icon-circle-green"></span>
+                          <span>Limo</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--detail-info-->
+                  <div class="col-xs-12 col-sm-7">
+                    <div class="space visible-xs"></div>
+
+                    <div class="profile-user-info profile-user-info-striped">
+                      <div class="profile-info-row">
+                        <div class="profile-info-name"> Username </div>
+
+                        <div class="profile-info-value">
+                          <span>Limo</span>
+                        </div>
+                      </div>
+
+                      <div class="profile-info-row">
+                        <div class="profile-info-name"> Location </div>
+
+                        <div class="profile-info-value">
+                          <i class="fa fa-map-marker light-orange bigger-110"></i>
+                          <span>Netherlands, Amsterdam</span>
+                        </div>
+                      </div>
+
+                      <div class="profile-info-row">
+                        <div class="profile-info-name"> Age </div>
+
+                        <div class="profile-info-value">
+                          <span>38</span>
+                        </div>
+                      </div>
+
+                      <div class="profile-info-row">
+                        <div class="profile-info-name"> Joined </div>
+
+                        <div class="profile-info-value">
+                          <span>2010/06/20</span>
+                        </div>
+                      </div>
+
+                      <div class="profile-info-row">
+                        <div class="profile-info-name"> Last Online </div>
+
+                        <div class="profile-info-value">
+                          <span>3 hours ago</span>
+                        </div>
+                      </div>
+
+                      <div class="profile-info-row">
+                        <div class="profile-info-name"> About Me </div>
+
+                        <div class="profile-info-value">
+                          <span>Bio</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="space visible-xs"></div>
+                    <h4 class="header blue lighter less-margin">Send a message to Alex</h4>
+
+                    <div class="space-6"></div>
+
+                    <form>
+                      <fieldset>
+                        <textarea class="width-100" resize="none" placeholder="Type something…" style="height:90px;"></textarea>
+                      </fieldset>
+
+                      <div class="hr hr-dotted"></div>
+
+                      <div class="clearfix">
+                        <label class="pull-left">
+                          <input type="checkbox">
+                          <span class="send-email"> Email me a copy</span>
+                        </label>
+
+                        <button class=" btn btn-sm pull-right btn-primary" type="button">
+                          Submit
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      
-      jQuery(document).ready(function($) {
-        //初始化左侧菜单
-        $(".nav-list").Tree({
-          menuDown:"glyphicon glyphicon-menu-down menuDown"
+      //detail-fino
+      $(function(){
+        $(".table-info-list .show-details-btn").each(function() {
+          $(this).bind('click',function(event) {
+            $(this).parent().parent().next().toggle();
+          }); 
         });
-      });
+      })
     </script>
   </body>
 </html>
