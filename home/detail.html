@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>详情页</title>
+        <!-- Bootstrap 3.35 核心 CSS 文件 -->
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+        <!-- 添加 font awesome 字体图标-->
+        <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css">
+        <!-- 自定义 CSS 文件 -->
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        <!-- jQuery-2.14 文件 -->
+        <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+        <!-- Bootstrap 核心 JavaScript 文件 -->
+        <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+        <!-- 前台 JavaScript 文件 -->
+        <script type="text/javascript" src="js/custom.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                <div class="container">
+                    <div class="navbar-header">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <a href="#" class="home">Home</a>
+                        <a class="navbar-toggle collapsed collapsed-custom" data-toggle="collapse" data-target="#nav-collapse">
+                          <span class="sr-only">展开导航菜单</span>
+                          <span class="icon-bar icon-bar-custom"></span>
+                          <span class="icon-bar icon-bar-custom"></span>
+                          <span class="icon-bar icon-bar-custom"></span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="nav-collapse">
+                        <ul class="nav navbar-nav navbar-nav-custom pull-left">
+                            <li class="active"><a href="#">技术</a></li>
+                            <li><a href="#">分享</a></li>
+                            <li><a href="#">随笔</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="breadcrumbs-container">
+                <div class="container">
+                    <div class="col-xs-12 no-padding">
+                        <ol class="breadcrumb bc pull-right">
+                          <li><span class="glyphicon glyphicon-hand-right"></span><a href="#">Home</a></li>
+                          <li class="active">技术</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <h3 class="post-title">让PHP7达到最高性能的几个Tips</h3>
+                    <section class="post-meta">
+                        <span class="author">作者：<a href="/">chahualao</a></span> •
+                        <time class="post-date" datetime="2016年2月3日星期一晚上10点10分50秒" title="2016年2月3日星期一晚上10点10分50秒">2016年2月3日</time>
+                    </section>
+                    <div class="post-details">
+                        <p>PHP7已经发布了, 作为PHP10年来最大的版本升级, 最大的性能升级, PHP7在多放的测试中都表现出很明显的性能提升, 然而, 为了让它能发挥出最大的性能, 我还是有几件事想提醒下.</p>
+                        <p>记得启用Zend Opcache, 因为PHP7即使不启用Opcache速度也比PHP-5.6启用了Opcache快, 所以之前测试时期就发生了有人一直没有启用Opcache的事情. 启用Opcache非常简单, 在php.ini配置文件中加入:</p>
+                        <div class="details-img-container">
+                            <ul class="thumbnail">
+                                <li>
+                                    <img src="images/thumb-1.jpg">
+                                    <div class="text">
+                                        <div class="inner">
+                                            <span>my photos</span>
+                                            <br />
+                                            <a href="images/image-1.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-search-plus"></span>
+                                            </a>
+                                            <a href="images/image-1.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-user"></span>
+                                            </a>
+                                            <a href="images/image-1.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-share"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/thumb-2.jpg">
+                                    <div class="text">
+                                        <div class="inner">
+                                            <span>my photos</span>
+                                            <br />
+                                            <a href="images/image-2.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-search-plus"></span>
+                                            </a>
+                                            <a href="images/image-2.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-user"></span>
+                                            </a>
+                                            <a href="images/image-2.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-share"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/thumb-3.jpg">
+                                    <div class="text">
+                                        <div class="inner">
+                                            <span>my photos</span>
+                                            <br />
+                                            <a href="images/image-3.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-search-plus"></span>
+                                            </a>
+                                            <a href="images/image-3.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-user"></span>
+                                            </a>
+                                            <a href="images/image-3.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-share"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/thumb-4.jpg">
+                                    <div class="text">
+                                        <div class="inner">
+                                            <span>my photos</span>
+                                            <br />
+                                            <a href="images/image-4.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-search-plus"></span>
+                                            </a>
+                                            <a href="images/image-4.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-user"></span>
+                                            </a>
+                                            <a href="images/image-4.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-share"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/thumb-5.jpg">
+                                    <div class="text">
+                                        <div class="inner">
+                                            <span>my photos</span>
+                                            <br />
+                                            <a href="images/image-5.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-search-plus"></span>
+                                            </a>
+                                            <a href="images/image-5.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-user"></span>
+                                            </a>
+                                            <a href="images/image-5.jpg" data-rel="colorbox" class="cboxElement">
+                                                <span class="fa fa-share"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                        以我的CentOS 6.5为例, 通过:
+                        $sudo sysctl vm.nr_hugepages=512
+                        分配512个预留的大页内存:
+                        </p>
+                        <div class="code-container">
+                            <p>$sudo sysctl vm.nr_hugepages=512</p>
+                            <p>$ cat /proc/meminfo  | grep Huge</p>
+                            <p>AnonHugePages:    106496 kB</p>
+                            <p>HugePages_Total:     512</p>
+                            <p>HugePages_Free:      504</p>
+                            <p>HugePages_Rsvd:       27</p>
+                            <p>HugePages_Surp:        0</p>
+                            <p>Hugepagesize:       2048 kB</p>
+                        </div>
+                    </div>
+                    <section class="post-meta post-meta-else">
+                        <p>source: <a href=""></a></p>
+                        <span class="author">author：<a href="/">chahualao</a></span> •
+                        <span class="mail">mail: <a href="javascript:;">chahualao@163.com</a></span> •
+                        <span>转载申明：follow your heart .</span>
+                    </section>
+                    <div class="post-detail-comments">
+                        <span>Leave a comment:</span>
+                        <div class="row comments-form">
+                            <form class="col-xs-12">
+                                <div class="input-group margin-tb-4">
+                                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                    <input class="form-control" type="text" placeholder="Email address">
+                                </div>
+                                <input name="id" type="hidden" value="1">
+                                <textarea name="text" class="form-control margin-tb-4" id="comments-1" placeholder="添加评论"></textarea>
+                                <button type="button" class="btn btn-primary btn-sm post-comments margin-tb-4">提交评论</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="posted-detail-comments">
+                        <ul class="comments-lists" id="posted-comments-list">
+                            <li class="comments-row">
+                                <div class="media">
+                                    <a href="#" target="_blank">
+                                        <img src="http://img.mukewang.com/user/55dff7c40001b55701000100-40-40.jpg">
+                                    </a>
+                                </div>
+                                <div class="bd">
+                                    <div class="uname">bool</div>
+                                    <p class="ccts">受益良多，thanks!</p>
+                                    <div class="footinfo">
+                                        <span class="time">Time: 3天前</span>
+                                        <a href="javascript:;" class="op-item post-reply" title="回复">
+                                            <span class="fa fa-reply"></span>
+                                            1
+                                        </a>
+                                        <a href="javascript:;" class="op-item post-like" title="点赞">
+                                            <span class="fa fa-thumbs-o-up"></span>
+                                            120
+                                        </a>
+                                    </div>
+                                    <div class="reply-box">
+                                        <form method="post">
+                                            <input name="id" type="hidden" value="1">
+                                            <textarea name="text" class="form-control margin-tb-4" id="comments-1" placeholder="添加评论"></textarea>
+                                            <button type="button" class="btn btn-primary btn-sm post-comments margin-tb-4">提交评论</button>
+                                        </form>
+                                    </div>
+                                    <div class="follow-reply">
+                                        <ul class="follow-reply-lists">
+                                            <li class="comments-row">
+                                                <div class="media">
+                                                    <a href="#" target="_blank">
+                                                        <img src="http://img.mukewang.com/user/55dff7c40001b55701000100-40-40.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="bd">
+                                                    <div class="uname">bool</div>
+                                                    <p class="ccts">受益良多，thanks!</p>
+                                                    <div class="footinfo">
+                                                        <span class="time">Time: 3天前</span>
+                                                        <a href="javascript:;" class="op-item post-reply"  title="回复">
+                                                            <span class="fa fa-reply"></span>
+                                                            4
+                                                        </a>
+                                                        <a href="javascript:;" class="op-item post-like" title="点赞">
+                                                            <span class="fa fa-thumbs-o-up"></span>
+                                                            100
+                                                        </a>
+                                                    </div>
+                                                    <div class="reply-box">
+                                                        <form method="post">
+                                                            <input name="id" type="hidden" value="1">
+                                                            <textarea name="text" class="form-control margin-tb-4" id="comments-1" placeholder="添加评论"></textarea>
+                                                            <button type="button" class="btn btn-primary btn-sm post-comments margin-tb-4">提交评论</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

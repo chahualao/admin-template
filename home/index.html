@@ -2,10 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>首页</title>
         <!-- Bootstrap 3.35 核心 CSS 文件 -->
         <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
-        <!-- TPCMF 核心 CSS 文件 -->
+        <!-- 添加 font awesome 字体图标-->
+        <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css">
+        <!-- 自定义 CSS 文件 -->
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <!-- jQuery-2.14 文件 -->
         <script type="text/javascript" src="../static/js/jquery.min.js"></script>
@@ -49,12 +52,238 @@
             </div>
         </header>
         <div class="container">
+            <div class="row">
             <div class="col-xs-12">
                 <div class="timeline-container">
-                    <div class="timeline-day">
-                        <span class="label label-primary label-lg arrowed-in-right">Today</span>
+                    <!--info section start-->
+                    <div class="timeline-info-box">
+                        <div class="timeline-day">
+                            <span class="label label-primary label-lg arrowed-in-right">Today</span>
+                        </div>
+                        <div class="timeline-section">
+                            <div class="timeline-label">
+                                <img src="images/avatar1.png" class="timeline-label-avatar">
+                                <span class="timeline-label-time">16:22</span>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-info-header">
+                                    <h5 class="timeline-info-header-title">我要宣布，我的博客正式上线了！</h5>
+                                    <span class="timeline-toolbar pull-right">
+                                        <i class="glyphicon glyphicon-time"></i>
+                                        16:22
+                                    </span>
+                                </div>
+                                <div class="timeline-info-body">
+                                    <div class="timeline-info-body-main">
+                                        哎呀妈~ 群里好多装逼的啊 …
+                                        <div class="time-line-info-space"></div>
+                                        <div class="timeline-info-toolbar">
+                                            <div class="click-readmore">
+                                                <i class="glyphicon glyphicon-hand-right"></i>
+                                                <a href="detail.html">Click to read more ...</a>
+                                            </div>
+                                            <div class="option">
+                                                <a href="#" class="comments"><i class="glyphicon glyphicon-comment"></i><span>21</span></a>
+                                                <a href="javascript:;" class="like"><i class="glyphicon glyphicon-heart"></i><span>101</span></a>
+                                                <a href="javascript:;" class="comment" data-id="1" data-target="#comment-1"><i class="glyphicon glyphicon-pencil" title="添加评论"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-comment" id="comments-1" data-id="1">
+                                <div class="row">
+                                    <form class="col-xs-10 col-xs-12">
+                                        <input name="id" type="hidden" value="1">
+                                        <textarea name="text" class="form-control" id="comments-1" placeholder="添加评论"></textarea>
+                                    </form>
+                                    <div class="col-xs-2 col-xs-12">
+                                        <button type="button" class="btn btn-primary btn-sm post-comments">提交评论</button>
+                                        <a href="#" class="full-comment">full comment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--loading comments-->
+                            <div class="load-comments" id="load-comments-1">
+                                
+                            </div>
+                        </div>
+                        <div class="timeline-section">
+                            <div class="timeline-label">
+                                <span class="fa fa-trophy btn btn-pink timeline-label-ico"></span>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-info-header">
+                                    <h5 class="timeline-info-header-title">一句话样式</h5>
+                                    <span class="timeline-toolbar pull-right">
+                                        <i class="glyphicon glyphicon-time"></i>
+                                        1 hour ago
+                                    </span>
+                                    <div class="timeline-toolbar pull-right mini-toolbar">
+                                        <a href="#" class="comments"><i class="glyphicon glyphicon-comment"></i><span>21</span></a>
+                                        <a href="javascript:;" class="like"><i class="glyphicon glyphicon-heart"></i><span>101</span></a>
+                                        <a href="javascript:;" class="comment" data-id="2" data-target="#comment-2"><i class="glyphicon glyphicon-pencil" title="添加评论"></i></a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="timeline-comment" id="comments-2" data-id="2">
+                                <div class="row">
+                                    <form class="col-xs-10 col-xs-12">
+                                        <input name="id" type="hidden" value="1">
+                                        <textarea name="text" class="form-control" id="comments-2" placeholder="添加评论"></textarea>
+                                    </form>
+                                    <div class="col-xs-2 col-xs-12">
+                                        <button type="button" class="btn btn-primary btn-sm post-comments">提交评论</button>
+                                        <a href="#" class="full-comment">full comment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--loading comments-->
+                            <div class="load-comments" id="load-comments-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--info section end-->
+                    <div class="timeline-info-box">
+                        <div class="timeline-day">
+                            <span class="label label-success label-lg arrowed-in-right">Yesterday</span>
+                        </div>
+                        <div class="timeline-section">
+                            <div class="timeline-label">
+                                <span class="glyphicon glyphicon-cutlery btn btn-success timeline-label-ico"></span>
+                            </div>
+                            <div class="timeline-info">
+                                <div class="timeline-info-header">
+                                    <h5 class="timeline-info-header-title">Happy new year！</h5>
+                                    <span class="timeline-toolbar pull-right">
+                                        <i class="glyphicon glyphicon-time"></i>
+                                        10 hour ago
+                                    </span>
+                                </div>
+                                <div class="timeline-info-body">
+                                    <div class="timeline-info-body-main">
+
+                                        <div class="pull-left">
+                                            公牛好多SB.
+                                            <br>
+                                            有图为证: you all , yours eyes...【骄阳与火】►ss◄
+                                        </div>
+                                        <div class="timeline-info-thumb">
+                                            <i class="glyphicon glyphicon-menu-left"></i>
+
+                                            &nbsp;
+                                            <img alt="Image 4" width="36" src="images/thumb-4.jpg">
+                                            <img alt="Image 3" width="36" src="images/thumb-3.jpg">
+                                            <img alt="Image 2" width="36" src="images/thumb-2.jpg">
+                                            <img alt="Image 1" width="36" src="images/thumb-1.jpg">
+                                            &nbsp;
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </div>
+
+                                        <div class="timeline-info-toolbar">
+                                            <div class="click-readmore">
+                                                <i class="glyphicon glyphicon-hand-right"></i>
+                                                <a href="#">Click to read more ...</a>
+                                            </div>
+                                            <div class="option">
+                                                <a href="#" class="comments"><i class="glyphicon glyphicon-comment"></i><span>21</span></a>
+                                                <a href="javascript:;" class="like"><i class="glyphicon glyphicon-heart"></i><span>101</span></a>
+                                                <a href="javascript:;" class="comment" data-id="2" data-target="#comment-2"><i class="glyphicon glyphicon-pencil" title="添加评论"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-comment" id="comments-2" data-id="2">
+                                <div class="row">
+                                    <form class="col-xs-10 col-xs-12">
+                                        <input name="id" type="hidden" value="1">
+                                        <textarea name="text" class="form-control" id="comments-2" placeholder="添加评论"></textarea>
+                                    </form>
+                                    <div class="col-xs-2 col-xs-12">
+                                        <button type="button" class="btn btn-primary btn-sm post-comments">提交评论</button>
+                                        <a href="#" class="full-comment">full comment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--loading comments-->
+                            <div class="load-comments" id="load-comments-2">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-info-box">
+                        <div class="timeline-day">
+                            <span class="label label-default label-lg arrowed-in-right">February 2</span>
+                        </div>
+                        <div class="timeline-section">
+                            <div class="timeline-label">
+                                <span class="fa fa-bug btn btn-danger timeline-label-ico"></span>
+                            </div>
+                            <div class="timeline-info color-danger">
+                                <div class="timeline-info-header">
+                                    <h5 class="timeline-info-header-title">解决thinkphp的一处bug !</h5>
+                                    <span class="timeline-toolbar pull-right">
+                                        <i class="glyphicon glyphicon-time"></i>
+                                        10 hour ago
+                                    </span>
+                                </div>
+                                <div class="timeline-info-body">
+                                    <div class="timeline-info-body-main">
+
+                                        <div class="pull-left">
+                                            公牛好多SB.
+                                            <br>
+                                            有图为证: you all , yours eyes...【骄阳与火】►ss◄
+                                        </div>
+                                        <div class="timeline-info-thumb">
+                                            <i class="glyphicon glyphicon-menu-left"></i>
+
+                                            &nbsp;
+                                            <img alt="Image 4" width="36" src="images/thumb-4.jpg">
+                                            <img alt="Image 3" width="36" src="images/thumb-3.jpg">
+                                            <img alt="Image 2" width="36" src="images/thumb-2.jpg">
+                                            <img alt="Image 1" width="36" src="images/thumb-1.jpg">
+                                            &nbsp;
+                                            <i class="glyphicon glyphicon-menu-right"></i>
+                                        </div>
+
+                                        <div class="timeline-info-toolbar">
+                                            <div class="click-readmore">
+                                                <i class="glyphicon glyphicon-hand-right"></i>
+                                                <a href="#">Click to read more ...</a>
+                                            </div>
+                                            <div class="option">
+                                                <a href="#" class="comments"><i class="glyphicon glyphicon-comment"></i><span>21</span></a>
+                                                <a href="javascript:;" class="like"><i class="glyphicon glyphicon-heart"></i><span>101</span></a>
+                                                <a href="javascript:;" class="comment" data-id="2" data-target="#comment-2"><i class="glyphicon glyphicon-pencil" title="添加评论"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-comment" id="comments-3" data-id="3">
+                                <div class="row">
+                                    <form class="col-xs-10 col-xs-12">
+                                        <input name="id" type="hidden" value="1">
+                                        <textarea name="text" class="form-control" id="comments-2" placeholder="添加评论"></textarea>
+                                    </form>
+                                    <div class="col-xs-2 col-xs-12">
+                                        <button type="button" class="btn btn-primary btn-sm post-comments">提交评论</button>
+                                        <a href="#" class="full-comment">full comment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--loading comments-->
+                            <div class="load-comments" id="load-comments-2">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>    
     </body>
